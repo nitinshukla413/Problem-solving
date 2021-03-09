@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> v(26);
+    int t=0;
+    for(int i=0;i<v.size();i++)
+    {
+        cin>>v[i];
+    }
+    char letter[100];
+    
+    cin>>letter;
+    
+    int l = strlen(letter);
+    
+    for(int i=0;i<l;i++)
+    {
+        if(v[int(letter[i]-97)]>t)
+        {
+            t=v[int(letter[i]-97)];
+        }
+    }
+    
+    cout<<t*l;
+}
